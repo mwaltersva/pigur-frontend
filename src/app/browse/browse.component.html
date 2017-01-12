@@ -1,0 +1,22 @@
+<div class="ui-g">
+  <div class="ui-g-2">
+    <button pButton type="button" label="Random" (click)="getRandom()"></button>
+  </div>
+</div>
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-dataGrid [value]="images"
+                [paginator]="true"
+                [rows]="18"
+                [lazy]="true"
+                (onLazyLoad)="getLazyImages($event)"
+                [pageLinks]="5"
+                [totalRecords]="totalRecords">
+      <template let-image let-i="index">
+        <div class="ui-sm-12 ui-md-4 ui-lg-3 ui-xl-2" style="text-align: center;">
+          <a href="/images/{{image.fileName}}"><img src="/images/thumbs/{{image.fileName}}"></a>
+        </div>
+      </template>
+    </p-dataGrid>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="ui-g">
+  <div class="ui-sm-12 ui-md-6 ui-lg-6">
+    <h4>Upload a file...</h4>
+    <form name="fileUpload">
+      <p-fileUpload name="file" url="/upload" accept="image/*" auto="auto" (onUpload)="onUpload($event)"></p-fileUpload>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let upload of uploads">
+          <a href="/images/{{upload.fileName}}">{{upload.fileName}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<p-dialog header="Uploading..." [(visible)]="dialogVisible" modal="modal" width="300" responsive="true">
+  Uploading...
+</p-dialog>

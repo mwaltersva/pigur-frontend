@@ -9,10 +9,15 @@ import {FileUploadModule} from 'primeng/components/fileupload/fileupload';
 import {RouterModule} from '@angular/router';
 import {DialogModule} from 'primeng/components/dialog/dialog';
 import {ButtonModule} from 'primeng/components/button/button';
+import { UploadComponent } from './upload/upload.component';
+import { BrowseComponent } from './browse/browse.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UploadComponent,
+    BrowseComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,8 @@ import {ButtonModule} from 'primeng/components/button/button';
     DataGridModule,
     FileUploadModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
