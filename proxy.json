@@ -1,0 +1,22 @@
+{
+  "/img": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/all": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/random": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/upload": {
+    "target": "http://localhost:3000",
+    "secure": false
+  },
+  "/images": {
+    "target": "http://localhost:3000",
+    "secure": false
+  }
+}
